@@ -30,7 +30,7 @@ namespace PrimsTreesKruskalTrees
         public void Run()
         {
             //TestPrims();
-            TestKruskal();
+            //TestKruskal();
         }
         public void TestPrims()
         {
@@ -48,22 +48,22 @@ namespace PrimsTreesKruskalTrees
             }
             Console.ReadKey();
         }
-        public void TestKruskal()
-        {
-            kruskal.DirectionalFillMatrix();
-            kruskal.NonDirectionalFillMatrix();
+        //public void TestKruskal()
+        //{
+        //    kruskal.DirectionalFillMatrix();
+        //    kruskal.NonDirectionalFillMatrix();
 
-            foreach (int item in kruskal.KruskalTraverse()
-            {
-                Console.WriteLine((cities)item);
-            }
-            Console.ReadKey();
-            foreach (string item in prims.rute)
-            {
-                Console.WriteLine(item);
-            }
-            Console.ReadKey();
-        }
+        //    foreach (int item in kruskal.KruskalTraverse()
+        //    {
+        //        Console.WriteLine((cities)item);
+        //    }
+        //    Console.ReadKey();
+        //    foreach (string item in prims.rute)
+        //    {
+        //        Console.WriteLine(item);
+        //    }
+        //    Console.ReadKey();
+        //}
     }
     
 }
