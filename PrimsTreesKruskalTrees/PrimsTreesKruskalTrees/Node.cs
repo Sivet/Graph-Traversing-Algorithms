@@ -21,7 +21,11 @@ namespace PrimsTreesKruskalTrees
             }
 
         }
-        
+        public override string ToString()
+        {
+            return name + " Index: " + index + " ";
+        }
+
     }
     
 }

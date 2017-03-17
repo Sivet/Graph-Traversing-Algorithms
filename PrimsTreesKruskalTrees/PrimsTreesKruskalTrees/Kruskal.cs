@@ -63,7 +63,7 @@ namespace PrimsTreesKruskalTrees
         public void CLear()
         {
             vistedlocations.Clear();
-            visited = new bool[9];
+            //visited = new bool[9];
         }
         public void Print()
         {

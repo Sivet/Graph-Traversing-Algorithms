@@ -20,7 +20,7 @@ namespace PrimsTreesKruskalTrees
         }
         public override string ToString()
         {
-            return "From: " + from.name + " To: " + to.name;
+            return to.name + " with " + weigth + " ";
         }
     }
 }

@@ -18,45 +18,24 @@ namespace PrimsTreesKruskalTrees
         {
             Node node = new Node(name, nodeList.Count);
             nodeList.Add(node);
-            //matrix[0, 2] = 67;
-            //matrix[0, 3] = 33;
-            //matrix[0, 7] = 49;
-            //matrix[1, 0] = 90;
-            //matrix[1, 5] = 56;
-            //matrix[1, 6] = 45;
-            //matrix[2, 8] = 61;
-            //matrix[4, 0] = 22;
-            //matrix[5, 8] = 43;
-            //matrix[6, 0] = 58;
-            //matrix[7, 4] = 67;
-            //matrix[7, 2] = 38;
-            //matrix[8, 0] = 59;
         }
-        public void AddEdgeToNode(Node from, Node to, int weigth)
+        public void AddEdgeToNode(string from, string to, int weigth)
         {
-            Edge newEdge = new Edge(from, to, weigth);
-            foreach (Node node in nodeList)
+            foreach (Node fromNode in nodeList)
             {
-                if (from.name == node.name)
+                if (from == fromNode.name)
                 {
-                    node.edges.Add(newEdge);
+                    foreach (Node toNode in nodeList)
+                    {
+                        if (to == toNode.name)
+                        {
+                            Edge newEdge = new Edge(fromNode, toNode, weigth);
+                            fromNode.edges.Add(newEdge);
+                        }
+                    }
                 }
             }
-
-            //DirectionalFillMatrix();
-            //matrix[2, 0] = 67;
-            //matrix[3, 0] = 33;
-            //matrix[7, 0] = 49;
-            //matrix[0, 1] = 90;
-            //matrix[5, 1] = 56;
-            //matrix[6, 1] = 45;
-            //matrix[8, 2] = 61;
-            //matrix[0, 4] = 22;
-            //matrix[8, 5] = 43;
-            //matrix[0, 6] = 58;
-            //matrix[4, 7] = 67;
-            //matrix[2, 7] = 38;
-            //matrix[0, 8] = 59;
+            
         }
         public void CLear()
         {
@@ -65,30 +44,19 @@ namespace PrimsTreesKruskalTrees
         }
         public void Print()
         {
-            //int k = 0;
-            //for (int i = 0; i < 9; i++)
-            //{
-            //    for (int j = 0; j < 9; j++)
-            //    {
-            //        if (k < 9)
-            //        {
-            //            Console.Write(matrix[i, j] + " , ");
-            //            k++;
-            //        }
-            //        else
-            //        {
-            //            k = 0;
-            //            Console.Write("\n");
-            //            Console.Write(matrix[i, j] + " , ");
-            //            k++;
-            //        }
-
-            //    }
-            //}
+            for (int i = 0; i < nodeList.Count; i++)
+            {
+                Console.WriteLine(" ");
+                Console.WriteLine(nodeList[i]);
+                for (int j = 0; j < nodeList[i].edges.Count; j++)
+                {
+                    Console.WriteLine("Can see: " + nodeList[i].edges[j]);
+                }
+            }
         }
 
-        public List<int> PrimsTraverse(int start)
-        {
+        //public List<int> PrimsTraverse(int start)
+        //{
             //rute = new string[9];
             //visitedlocations.Add(start);
             
@@ -129,7 +97,7 @@ namespace PrimsTreesKruskalTrees
 
             //return visitedlocations;
 
-        }
+        //}
         
     }
 }
