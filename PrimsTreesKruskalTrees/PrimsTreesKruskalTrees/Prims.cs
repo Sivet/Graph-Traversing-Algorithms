@@ -93,45 +93,6 @@ namespace PrimsTreesKruskalTrees
                 }
             }
             return visitedlocations;
-
-
-            //while (visitedlocations.Count < 9)
-            //{
-            //    int index = 0;
-            //    found:
-
-            //    int from = -1; //bare til at udskrive ruten
-            //    int to = -1; //bare til at udskrive ruten
-
-            //    int location = -1;
-            //    int lowest = int.MaxValue;
-
-            //    for (int x = 0; x < visitedlocations.Count; x++) //for hver location i vores liste
-            //    {
-            //        for (int y = 0; y < 9; y++) //hver af dem har 9 y værdier, eller potentielle steder den kan se
-            //        {
-            //            if (matrix[visitedlocations[x], y] != -1 && !visitedlocations.Contains(y) && matrix[visitedlocations[x], y] < lowest)
-            //            { //hvis matixen ikke indeholder -1 på den plads, og x's y ikke er besøgt før, og x's y er den mindste y
-
-            //                lowest = matrix[visitedlocations[x], y]; //set den nye laveste værdi
-            //                from = visitedlocations[x]; //bare til at udskrive ruten
-            //                to = y; //bare til at udskrive ruten
-            //                location = y; //set den nye location så den kan sættes som besøgt
-            //            }
-            //        }
-            //    }
-            //    if (lowest < int.MaxValue && location != -1) //hvis en lowest er blevet fundet, og location findes.
-            //    {
-            //        visitedlocations.Add(location); //tilføj location så den bliver husket som besøgt
-            //        rute[index] = from.ToString() + " " + to.ToString();
-            //        index++;
-            //        goto found;
-            //    }
-            //    break;
-            //}
-
-            //return visitedlocations;
-
         }
     }
 }

@@ -35,6 +35,7 @@ namespace PrimsTreesKruskalTrees
         public void TestPrims()
         {
             DirectedFillPrims();
+            //NonDirectedFillPrims();
             prims.PrimsStart("Odense");
             Console.ReadKey();
         }
