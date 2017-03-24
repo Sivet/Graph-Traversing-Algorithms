@@ -34,9 +34,12 @@ namespace PrimsTreesKruskalTrees
         }
         public void TestPrims()
         {
-            DirectedFillPrims();
-            //NonDirectedFillPrims();
-            prims.PrimsStart("Odense");
+            //DirectedFillPrims();
+            NonDirectedFillPrims();
+            foreach (Node city in prims.PrimsStart("Odense"))
+            {
+                Console.WriteLine(city);
+            }
             Console.ReadKey();
         }
         public void DirectedFillPrims()
@@ -87,7 +90,7 @@ namespace PrimsTreesKruskalTrees
             prims.AddEdgeToNode("Svendborg", "Odense", 90);
             prims.AddEdgeToNode("Svendborg", "Nyborg", 45);
             prims.AddEdgeToNode("Nyborg", "Odense", 58);
-            prims.AddEdgeToNode("Odense", "kerteminde", 33);
+            prims.AddEdgeToNode("Odense", "Kerteminde", 33);
             prims.AddEdgeToNode("Bogense", "Otterup", 53);
             prims.AddEdgeToNode("Otterup", "Odense", 22);
 
@@ -101,7 +104,7 @@ namespace PrimsTreesKruskalTrees
             prims.AddEdgeToNode("Odense", "Svendborg", 90);
             prims.AddEdgeToNode("Nyborg", "Svendborg", 45);
             prims.AddEdgeToNode("Odense", "Nyborg", 58);
-            prims.AddEdgeToNode("kerteminde", "Odense", 33);
+            prims.AddEdgeToNode("Kerteminde", "Odense", 33);
             prims.AddEdgeToNode("Otterup", "Bogense", 53);
             prims.AddEdgeToNode("Odense", "Otterup", 22);
         }
